@@ -1,0 +1,194 @@
+/* Genaral style setting*/
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+html,
+body,
+header,
+main,
+footer,
+aside,
+div {
+  display: block;
+  box-sizing: border-box;
+}
+
+/* some vars for style */
+:root {
+  --page-padding: 5%;
+  --header-height: 8%;
+  --main-height: 86%;
+  --footer-height: 6%;
+  --bg-header: rgb(0, 83, 72);
+  --bg-main: rgb(251, 237, 214);
+  --bg-sidebar: rgb(217, 255, 129);
+  --bg-footer: rgb(0, 47, 41);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(253, 250, 200);
+}
+
+/*--------------------------------------*/
+/* Header style-------------------------*/
+header {
+  width: 100%;
+  background-color: var(--bg-header);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px;
+  padding: 0px;
+}
+
+.div-header-logo-name {
+  display: inline-flex;
+  align-items: center;
+  margin: auto 0px;
+  padding: 0px 0px 0px var(--page-padding);
+  height: 100%;
+}
+
+.div-header-logo-name > img {
+  width: 20%;
+  padding-right: 3%;
+}
+
+.div-header-logo-name > h1 {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  font-size: 4.5vh;
+}
+
+.div-header-account {
+  margin: 0px;
+  padding: 0px var(--page-padding) 0px 0px;
+}
+
+.div-header-account > button {
+  margin: 0px;
+  background-color: var(--bg-header);
+  color: white;
+  font-size: 2.5vh;
+}
+.div-header-account > button:hover {
+  background-color: rgb(0, 131, 113);
+}
+/* Main style-------------------------------*/
+.main-container {
+  position: relative;
+  width: calc(100% - 2 * var(--page-padding));
+  height: var(--main-height);
+  margin: 0px auto;
+  background-color: var(--bg-main);
+  height: var(--main-height);
+  display: grid;
+  grid-template-columns: 15% 85%;
+}
+
+/*Sidebar*/
+.sidebar-menu {
+  height: 100%;
+  background-color: var(--bg-sidebar);
+}
+
+.sidebar-menu > p {
+  font-size: 3vh;
+  margin: 0px;
+  padding: 2vh 0px;
+  text-align: center;
+}
+
+/*Sidebar menu */
+.sidebar-menu ul {
+  list-style-type: none;
+  margin: 0px auto;
+  padding: 0px;
+  width: 90%;
+}
+
+.sidebar-menu li a {
+  display: block;
+  color: #000;
+  padding: 5% 8%;
+  margin: 1% 0px;
+  text-decoration: none;
+  border: 1px solid rgb(218, 218, 218, 0.5);
+}
+
+.sidebar-menu li a.active {
+  background-color: #00645c;
+  color: white;
+}
+
+.sidebar-menu li a:hover:not(.active) {
+  background-color: rgb(104, 150, 151);
+  color: white;
+}
+
+/*Main content style setting*/
+.main-content {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow-y: auto;
+}
+
+.main-content p {
+  font-size: 3vh;
+  margin: 0px;
+  padding: 2vh 0px;
+}
+
+.main-content img {
+  width: 80%;
+  height: auto;
+  margin: 0px auto 2% auto;
+}
+
+
+
+
+/*Footer style --------------*/
+footer {
+  display: flex;
+  width: 100%;
+  height: var(--footer-height);
+  padding: 0px;
+  position: relative;
+  color: rgb(218, 214, 214);
+  background-color: var(--bg-footer);
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-copyright {
+  display: inline-block;
+  padding: 0px 10px;
+}
+
+.footer-contact {
+  padding: 0px 10px;
+}
+
+footer p {
+  margin: 0px;
+  padding: 0px;
+}
+
+footer a {
+  margin: 0px;
+  color: rgb(247, 208, 102);
+}
